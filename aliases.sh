@@ -3,6 +3,10 @@ alias reload='source ~/.zshrc'
 alias tmuxk='tmux kill-session -t'
 alias tmuxa='tmux attach -t'
 alias ld='ls -d */'
+# git
+alias gs='git status'
+alias gd='git diff'
+alias gds='git diff --staged'
 # update gh-pages
 alias ghp='git checkout gh-pages;git merge master;git push origin gh-pages;git checkout master'
 # postgres
