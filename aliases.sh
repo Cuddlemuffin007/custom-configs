@@ -1,3 +1,7 @@
+# remove export GREP_OPTIONS="--color=auto" which is deprecated to alias
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias c='clear'
 alias reload='source ~/.zshrc'
 alias tmuxk='tmux kill-session -t'
