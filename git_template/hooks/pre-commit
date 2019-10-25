@@ -17,7 +17,7 @@
 
 # Modify this
 # LIST='list\|of\|words\|splitted\|by\|slash\|and\|pipe'
-LIST="puts\|pdb\|print\|alert(\|console.log(\|fprintf\|printf"
+LIST="puts\|pdb\|print\|alert(\|fprintf\|printf"
 
 if git rev-parse --verify HEAD >/dev/null 2>&1; then
     against=HEAD
