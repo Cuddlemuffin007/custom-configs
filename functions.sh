@@ -3,10 +3,16 @@
 # Usage: weather tokyo
 # -------------------------------------------------------------------
 weather() {
-    if [[ $# == 0 ]]; then
-        echo "Displaying closest city, but you can see others like this: 'weather city_name' or using IATA airport abbreviations like this 'weather lax'."
+    city=`curl -s https://ipinfo.io/city 2> /dev/null`
+    if [[ $1 == "-h" || $1 == "--help" ]]; then
+        echo "Displays the weather for your current city. You can also specify a city name or IATA airport abbreviation as the first argument."
+        echo "Ex:"
+        echo "weather"
+        echo "weather Tokyo"
+        echo "weather lax"
+    elif ping -q -c 1 -W 1 ipinfo.io &>/dev/null; then
+        curl http://wttr.in/${1:-$city} || echo "An error occurred. Did you enter a valid city?"
     fi
-    curl http://wttr.in/$1 || echo "An error occurred. Did you enter a valid city?"
 }
 # >>2
 

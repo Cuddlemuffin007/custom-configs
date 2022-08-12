@@ -43,3 +43,4 @@
     excludesfile = ~/.gitignore_global
 [init]
     templatedir = ~/dotfiles/custom-configs/git_template
+	defaultBranch = main
